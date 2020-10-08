@@ -46,6 +46,22 @@ You can add other valid origins by passing an `origins` parameter - you do so at
 
 It should not be able to explore directories outside the one you specify, but I haven't tested this rigorously.
 
+## Releasing and github actions
+
+This is more a memo to myself than anything anyone else needs to do!
+
+To push a new release:
+
+- change the version number in cargo.yml
+- commit and push
+
+then
+
+```sh
+git tag -a v1.0.0 -m "Releasing version v1.0.0"
+git push --tags
+```
+
 ## License
 
 Copyright © 2020 Kornelis Sietsma
