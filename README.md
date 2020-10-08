@@ -16,27 +16,29 @@ But CORS gets in the way - it is a specification designed to protect you from ma
 
 ## How to run it
 
-I haven't yet uploaded binaries - when I have, you will be able to use the binary rather than `cargo`
+You can fetch a binary executable from <https://github.com/kornysietsma/simple-code-server/releases> - if your platform is not supported, you may have to build a binary yourself or run this from `cargo` - I'll leave that up to you to work out.
 
-For now, from the source directory, run:
+The binary will be one of `simple-code-server-amd64`, `simple-code-server.exe` or `simple-code-server-osx` 
+
+To run it, simply execute it with the directory of the files you want to serve:
 
 ~~~bash
-cargo run -- path_to_files
+./simple-code-server-osx path_to_files
 ~~~
 
 This will run a web server on http://localhost:8675 with the root directory specified.
 
-For example, to serve up the source code to the simple code server itself run:
+For example, if you run it pointing to the simple code server source:
 
 ~~~bash
-cargo run -- .
+./simple-code-server-osx /User/me/code/simple-code-server
 ~~~
 
 Then you can open <http://localhost:8675/Cargo.toml> and see the contents of the `Cargo.toml` file.
 
 *NOTE* this doesn't serve up directory indexes or anything useful - at the moment it's really aimed at programs like the Polyglot Code Explorer, not for manual use.
 
-You can tweak the port, local interface, and CORS origins accepted - run `cargo run -- --help` for help on parameters, I'm not going to document them all here.
+You can tweak the port, local interface, and CORS origins accepted - run `./simple-code-server-osx --help` for help on parameters, I'm not going to document them all here.
 
 ## Bypassing CORS - is that safe?
 
