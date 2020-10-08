@@ -37,7 +37,7 @@ jobs:
       - uses: actions-rs/toolchain@v1
         with:
           toolchain: nightly
-          target:x86_64-apple-darwin
+          target: x86_64-apple-darwin
       - uses: actions-rs/cargo@v1
         with:
           command: build
